@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- الشريط العلوي (Header) -->
+    <div class="header">
+        هيئة الحشد الشعبي
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="login-container">
+        <div class="form-box">
+            <!-- الشعار داخل مربع تسجيل الدخول -->
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار" class="logo-img">
+            </div>
+            <h3>تسجيل الدخول</h3>
+            <form onsubmit="login(event)">
+                <input type="text" class="form-control" id="username" placeholder="اسم المستخدم">
+                <input type="password" class="form-control" id="password" placeholder="كلمة المرور">
+                <button class="btn" type="submit">دخول</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- شريط الحقوق -->
+    <div class="footer">
+        جميع الحقوق محفوظة © 2025
+    </div>
+
+    <style>
+        /* تنسيق الشعار داخل مربع تسجيل الدخول */
+        .login-container .form-box .logo img {
+            width: 200px;  /* تحديد حجم الشعار */
+            height: auto;
+            margin-bottom: 20px;  /* إضافة مسافة أسفل الشعار */
+        }
+
+        /* التنسيق العام */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            direction: rtl;
+        }
+
+        /* الشريط العلوي (Header) */
+        .header {
+            background-color: #4CAF50; /* اللون الأخضر */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* التأكد من أن الشريط العلوي يبقى فوق المحتوى */
+        }
+
+        /* المحتوى الرئيسي (Login Page) */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            padding-top: 80px; /* لتفادي تغطية الشريط العلوي */
+        }
+
+        .form-box {
+            width: 400px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .form-box h3 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-box .logo {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        .form-control:focus {
+            border-color: #4CAF50;
+            outline: none;
+        }
+
+        button.btn {
+            width: 100%;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button.btn:hover {
+            background-color: #45a049;
+        }
+
+        /* شريط الحقوق (Footer) */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</body>
+</html>

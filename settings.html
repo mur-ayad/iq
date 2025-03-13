@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إعدادات النظام</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- الشريط العلوي -->
+    <div class="header">
+        هيئة الحشد الشعبي
+    </div>
+
+    <!-- المحتوى الرئيسي -->
+    <div class="main-content">
+        <!-- مربع الأزرار مع الشعار -->
+        <div class="form-box">
+            <div class="logo">
+                <img src="images/logo.png" alt="شعار" class="logo-img">
+            </div>
+
+            <div class="buttons-container">
+                <button class="btn btn-success" onclick="window.location.href='add-user.html'">إضافة مستخدم</button>
+                <button class="btn btn-info" onclick="window.location.href='view-users.html'">عرض المستخدمين</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- شريط الحقوق -->
+    <div class="footer">
+        جميع الحقوق محفوظة © 2025
+    </div>
+
+    <!-- إضافة التنسيق في نهاية الكود -->
+    <style>
+        /* التنسيق العام */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            direction: rtl;
+            overflow-x: hidden; /* منع التمرير الأفقي */
+        }
+
+        /* الشريط العلوي (Header) */
+        .header {
+            background-color: #388E3C; /* أخضر غامق */
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 24px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        /* المحتوى الرئيسي */
+        .main-content {
+            padding-top: 80px; /* المسافة من الشريط العلوي */
+            display: flex;
+            justify-content: center; /* لتوسيط المربع */
+            align-items: center;
+            height: calc(100vh - 80px); /* إتاحة المساحة للمحتوى */
+        }
+
+        /* مربع الأزرار */
+        .form-box {
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            width: 200px; /* حجم الشعار */
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .buttons-container button {
+            width: 250px;
+            height: 60px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .buttons-container button:hover {
+            background-color: #45a049;
+        }
+
+        /* الأزرار الخاصة */
+        .btn-success {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .btn-info {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        /* شريط الحقوق (Footer) */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</body>
+</html>
